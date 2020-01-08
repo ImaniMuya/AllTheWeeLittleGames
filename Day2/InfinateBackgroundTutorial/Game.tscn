@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://Guys.tscn" type="PackedScene" id=2]
+[ext_resource path="res://spaceypicture.png" type="Texture" id=3]
+[ext_resource path="res://ScrollingBackground.gd" type="Script" id=4]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+uniform float scroll_speed;
+void fragment() {
+	vec2 shifteduv = UV;
+	shifteduv.y -= TIME * scroll_speed;
+	vec4 col = texture(TEXTURE,shifteduv);
+	COLOR = col;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/scroll_speed = null
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+Guys = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource( 2 )
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 602.0
+margin_bottom = 1026.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
+script = ExtResource( 4 )
+scroll_speed = 0.025
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
