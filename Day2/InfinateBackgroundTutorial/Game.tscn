@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Guys.tscn" type="PackedScene" id=2]
-[ext_resource path="res://spaceypicture.png" type="Texture" id=3]
+[ext_resource path="res://assets/spaceypicture.png" type="Texture" id=3]
 [ext_resource path="res://ScrollingBackground.gd" type="Script" id=4]
 
 [sub_resource type="Shader" id=1]
@@ -37,5 +37,4 @@ scroll_speed = 0.025
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
-
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

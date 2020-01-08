@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2978-purple-galaxy-1920x1080-fantasy-wallpaper.jpg-0e95698d5d570bcd50ba1f72ef25e0d1.stex"
+path="res://.import/spaceBackground.jpeg.jpg-45570899425ffff71e9580aef4ffb781.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2978-purple-galaxy-1920x1080-fantasy-wallpaper.jpg"
-dest_files=[ "res://.import/2978-purple-galaxy-1920x1080-fantasy-wallpaper.jpg-0e95698d5d570bcd50ba1f72ef25e0d1.stex" ]
+source_file="res://assets/spaceBackground.jpeg.jpg"
+dest_files=[ "res://.import/spaceBackground.jpeg.jpg-45570899425ffff71e9580aef4ffb781.stex" ]
 
 [params]
 
